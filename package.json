@@ -1,6 +1,6 @@
 {
-  "name": "comlink",
-  "version": "4.3.0-symphony.1",
+  "name": "@symphony/comlink",
+  "version": "1.0.0-automatic",
   "description": "Comlink makes WebWorkers enjoyable",
   "main": "dist/umd/comlink.js",
   "module": "dist/esm/comlink.mjs",
@@ -14,7 +14,8 @@
     "test": "npm run fmt_test && npm run build && npm run test:types && npm run test:unit",
     "fmt": "prettier --write './*.{mjs,js,ts,md,json,html}' './{src,docs,tests}/{,**/}*.{mjs,js,ts,md,json,html}'",
     "fmt_test": "test $(prettier -l './*.{mjs,js,ts,md,json,html}' './{src,docs,tests}/{**/,}*.{mjs,js,ts,md,json,html}' | wc -l) -eq 0",
-    "watchtest": "CHROME_ONLY=1 karma start --no-single-run"
+    "watchtest": "CHROME_ONLY=1 karma start --no-single-run",
+    "step-version": "step-version"
   },
   "husky": {
     "hooks": {
@@ -31,6 +32,7 @@
   },
   "license": "Apache-2.0",
   "devDependencies": {
+    "@symphony/rtc-builder": "~2.0.0",
     "chai": "4.2.0",
     "conditional-type-checks": "1.0.5",
     "husky": "4.2.5",
